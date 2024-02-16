@@ -13,21 +13,22 @@ Hestia
 
 
 :: The Awakening: Blood-Stained Altar {"position":"900,350","size":"100,100"}
-In this game, you have to do the good choices, to survive.
-What do you want ?
-I just want: [[To live]]  [[To die]]
+You awaken in a dirty cellar.
+The air heavy and disturbing. As your eyes adjust to the darkness, you realize you are lying on a cold stone altar, where you can see ominous bloodstains.
+You can hear a eerie silence, broken only by the sound of water drops falling from the ceilling.
+
+A shiver runs through you while you try to make sens of what is happening.
+Your senses heightened in this unsettling moment, you have to find an exit, and quickly ! 
+
+
+Facing a crucial decision, you can see 2 roads in the shadow. The first ascends, a mysterious path leading, maybe, you to the surface. The second descends, ever deeper underground maybe ? 
+
+You choose: [[the first path]] or [[the second path]]
+
+
+:: the first path {"position":"900,475","size":"100,100"}
 
 
 
+:: the second path {"position":"1025,475","size":"100,100"}
 
-
-:: To die {"position":"1025,475","size":"100,100"}
-					(align:"<==")+(box:"===XXXXX==")[END OF THE GAME]
-You have chosen to die, leaving behind you any chance of discovering what happened to you 
-
-
-:: To live {"position":"900,475","size":"100,100"}
-You awake in a dark cellar, on an altar covered with blood stains.
-
-Currently, you are in an underground passage of a castle.
-Do 
