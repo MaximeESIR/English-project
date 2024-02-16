@@ -1,0 +1,33 @@
+:: StoryTitle
+Hestia
+
+
+:: StoryData
+{
+  "ifid": "1004610C-F4E6-4CD2-AF30-EFF736C8E8C3",
+  "format": "Harlowe",
+  "format-version": "3.3.8",
+  "start": "The Awakening: Blood-Stained Altar",
+  "zoom": 1
+}
+
+
+:: The Awakening: Blood-Stained Altar {"position":"900,350","size":"100,100"}
+In this game, you have to do the good choices, to survive.
+What do you want ?
+I just want: [[To live]]  [[To die]]
+
+
+
+
+
+:: To die {"position":"1025,475","size":"100,100"}
+					(align:"<==")+(box:"===XXXXX==")[END OF THE GAME]
+You have chosen to die, leaving behind you any chance of discovering what happened to you 
+
+
+:: To live {"position":"900,475","size":"100,100"}
+You awake in a dark cellar, on an altar covered with blood stains.
+
+Currently, you are in an underground passage of a castle.
+Do 
