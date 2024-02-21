@@ -7,13 +7,13 @@ Hestia
   "ifid": "1004610C-F4E6-4CD2-AF30-EFF736C8E8C3",
   "format": "Harlowe",
   "format-version": "3.3.8",
-  "start": "The Awakening: Blood-Stained Altar",
+  "start": "Blood-Stained Altar",
   "zoom": 1
 }
 
 
-:: The Awakening: Blood-Stained Altar {"position":"900,350","size":"100,100"}
-You awaken in a dirty cellar.
+:: Blood-Stained Altar {"position":"900,350","size":"100,100"}
+<h1>You awaken in a dirty cellar</h1>
 The air heavy and disturbing. As your eyes adjust to the darkness, you realize you are lying on a cold stone altar, where you can see ominous bloodstains.
 You can hear a eerie silence, broken only by the sound of water drops falling from the ceilling.
 
@@ -21,12 +21,20 @@ A shiver runs through you while you try to make sens of what is happening.
 Your senses heightened in this unsettling moment, you have to find an exit, and quickly ! 
 
 
-Facing a crucial decision, you can see 2 roads in the shadow. The first ascends, a mysterious path leading, maybe, you to the surface. The second descends, ever deeper underground maybe ? 
+Facing a crucial decision, you can see 2 roads in the shadow. The first ascends. The second descends. Maybe one of this path can take you out...
 
 You choose: [[the first path]] or [[the second path]]
 
 
 :: the first path {"position":"900,475","size":"100,100"}
+at the bottom of the path, you discover a long, dimly lit alley that appears to lead to what seems to be a major street.
+About ten meters away, you can see a dog, next to which there is a man, asleep in his chair. THis man is dressed in a way that reminds you of the attire worn by guards in old movies..
+
+What do you want to do ? 
+i'm going to kick the guard ! 
+i'm going to detach the dog !
+i'm just going to go through  !
+Oh i have chocolate on me ! i'm going to give it to this little dog ! 
 
 
 
