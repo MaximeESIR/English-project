@@ -1,0 +1,181 @@
+:: StoryTitle
+Hestia
+
+
+:: StoryData
+{
+  "ifid": "1004610C-F4E6-4CD2-AF30-EFF736C8E8C3",
+  "format": "Harlowe",
+  "format-version": "3.3.8",
+  "start": "Blood-Stained Altar",
+  "zoom": 1
+}
+
+
+:: \ Fish accepted {"position":"375,850","size":"100,100"}
+(set: $myArray to (a: ...$myArray, "Accepted fish"))
+
+
+You take the fish and start to eat it.
+The seawoman starts talking to you "Oh oh,  it seems you like it"
+After that, she starts walking away slowly.
+
+
+
+
+
+You remember you are in a market and start wandering between the aisles.
+The more you continue to walk, the less you have light.  You start to be thrilled, seeing shifty guys. This kingdom (t:"TODO")
+
+On the right, a stand. You are confused, because on a pannel you see something that seems similar to you. On it, you read "cast the demon".
+
+A woman, dressed in witch is watching you since the start. She seems angry.
+
+Do you want to talk to her?
+
+TO MODIFY
+
+[[Sure]]
+[[I have to run !]]
+
+
+
+
+
+
+:: Blood-Stained Altar {"position":"900,350","size":"100,100"}
+<!-- Single line comment. Appears in generated HTML -->
+(set: $myArray to (a: 'Altar'))
+
+
+
+<h1>You awaken in a dirty cellar</h1>
+The air is heavy and disturbing. As your eyes adjust to the darkness, you realize you are lying on a cold stone altar, where you can see ominous bloodstains.
+You can hear a eerie silence, broken only by the sound of water drops falling from the ceilling.
+
+A shiver runs through you while you try to make sens of what is happening.
+Your senses heightened in this unsettling moment, you have to find an exit, and quickly ! 
+
+
+Facing a crucial decision, you can see 2 roads in the shadow. The first ascends. The second descends. Maybe one of this path can take you out...
+
+You choose: [[the first path|Gloomy alley]] or [[the second path|inside the Castle]]
+
+
+
+
+
+
+
+
+
+:: Gloomy alley {"position":"600,450","size":"100,100"}
+(set: $myArray to (a: ...$myArray, "Gloomy alley"))
+
+
+At the bottom of the path, you discover a long, dimly lit alley that appears to lead to what seems to be a major street.
+About ten meters away, you can see a dog, next to which there is a man, asleep in his chair. This man is dressed in a way that reminds you of the attire worn by guards in old movies..
+
+What do you want to do ? 
+[[i'm going to kick the guard !]]
+[[i'm going to detach the dog !]]
+[[i'm just going to go through  ! |Market]]
+[[Oh i have chocolate on me ! i'm going to give it to this little dog ! ]]
+
+
+
+:: I have to run ! {"position":"625,1000","size":"100,100"}
+
+
+
+:: Market {"position":"500,750","size":"100,100"}
+(set: $myArray to (a: ...$myArray, "Market"))
+
+While walking in the alley, you seem to hear voices speaking more and more loudly.
+The light is getting brighter. You see shadows moving.
+At the end of the alley, you find  an immense noisy place with a lot of people. 
+There are some market stall; and smells make you remembering you are hungry.
+
+Someone arrives in the back. It's a woman with a fisherman's outfit.
+She walks wobbly, maybe because she likes alcohol.
+She holds out a breaded fish towards you: "Ohoh little boy, you seems hungry ! take one of my delicious fish ! "
+
+
+
+You have little doubts. Why someone should help you? 
+
+
+[[I may accept it... | Fish accepted]]
+[[Sorry, I don't want your fish.]]
+
+
+
+
+
+
+
+
+
+
+:: Oh i have chocolate on me ! i'm going to give it to this little dog !\  {"position":"500,600","size":"100,100"}
+
+
+
+You get out of your pocket a bar of chocolate.
+You feel happy giving it to the dog.
+But...you remember that dogs do not like chocolate.
+The dog begins to drool bubbles. A few minutes after, he is dead. 
+
+Oh...[[i'm just going to go through  ! |Market]]
+
+
+
+:: Sorry, I don't want your fish. {"position":"625,800","size":"100,100"}
+(set: $myArray to (a: ...$myArray, "Refused fish"))
+
+You remember you are in a market and start wandering between the aisles.
+More you continue to walk, the less you have light.  You start to be thrilled, seeing shifty guys.
+On the right, a stand. You are confused, because on a pannel you see something that seems similar to you. On it, you read "cast the demon".
+
+A woman, dressed in witch is watching you since the start. She seems angry.
+
+Do you want to talk to her?
+
+[[Sure]]
+[[I have to run !]]
+
+
+
+:: Sure {"position":"400,1000","size":"100,100"}
+you ask to the witch: "Are you okay madame?"
+
+SHe doesnt answer
+  
+
+
+:: i'm going to detach the dog ! {"position":"475,325","size":"100,100"}
+You detach the dog and feel happy doing the right thing.
+He starts growling: " GRRR waf waf"
+Because of that, you start to be anxious.
+
+The dog attacks you, not letting you any chance to survive.
+
+
+<h1>DEAD</h1>
+You returns to the [[Blood-Stained Altar]]
+
+
+
+:: i'm going to kick the guard ! {"position":"700,575","size":"100,100"}
+You start giving kicks to the guard.
+Unfortunately, he is well trained ! He wakes up, and starts crying "stupid monster !" while kicking you.
+You have any chance against this man.
+
+
+<h1>DEAD</h1>
+You returns to the [[Blood-Stained Altar]]
+
+
+:: inside the Castle {"position":"1125,450","size":"100,100"}
+(set: $myArray to (a: ...$myArray,'Hall' "))
+You arrive in a gigantic Hall....???
