@@ -1,0 +1,309 @@
+:: StoryTitle
+Hestia
+
+
+:: StoryData
+{
+  "ifid": "1004610C-F4E6-4CD2-AF30-EFF736C8E8C3",
+  "format": "Harlowe",
+  "format-version": "3.3.8",
+  "start": "Blood-Stained Altar",
+  "zoom": 1
+}
+
+
+:: \ Fish accepted {"position":"325,775","size":"100,100"}
+(set: $myArray to (a: ...$myArray, "Accepted fish"))
+
+
+You take the fish and start to eat it.
+The seawoman starts talking to you "Oh oh,  it seems you like it. If you have money, come back to me ! i am going to the port, and i have a fantastic boat ! "
+After that, she starts walking away slowly.
+
+
+You remember you are in a market and start wandering between the aisles.
+
+
+Far away, you can distinguish a foutain, and start walking in its direction.
+While walking, you understand that this village doesnt feel fair. A loot of people are living in poor living conditions while others are laughing. 
+But you have to escape from this village.
+
+During your walk, you find a panel wich represents a flower, with the words "Little garden".
+
+Do you prefer
+to go to [[the fountain |Fountain]]
+or to [[the little garden|Little garden]]
+
+
+
+
+
+
+
+:: Blood-Stained Altar {"position":"875,325","size":"100,100"}
+<!-- Single line comment. Appears in generated HTML -->
+(set: $myArray to (a: 'Altar'))
+
+
+
+<h1>You awaken in a dirty cellar</h1>
+The air is heavy and disturbing. As your eyes adjust to the darkness, you realize you are lying on a cold stone altar, where you can see ominous bloodstains.
+You can hear a eerie silence, broken only by the sound of water drops falling from the ceilling.
+
+A shiver runs through you while you try to make sens of what is happening.
+Your senses heightened in this unsettling moment, you have to find an exit, and quickly ! 
+
+
+Facing a crucial decision, you can see 2 roads in the shadow. The first ascends. The second descends. Maybe one of this path can take you out...
+
+You choose: [[the first path|Gloomy alley]] or [[the second path|inside the Castle]]
+
+
+
+
+
+
+
+
+
+:: Fountain {"position":"625,975","size":"100,100"}
+(set: $firstAppear to true)
+(for: each _element, ...$myArray)[
+	(if: _element is "Fountain")[(set: $firstAppear to false)]
+
+]
+(if:$firstAppear is true)[
+(set: $myArray to (a: ...$myArray, "Fountain"))
+You arrive at the Fountain.
+Everything seems to be wonderful around you. The architecture dive you in a fantasist world. You hear the water flowing, the birds singing, and the villagers speaking.
+
+The place is looking very animated.
+
+what do you want to do ? 
+
+to [[see myself in the water]]
+or [[spy those villagers]]
+
+
+]
+
+
+
+if(ok avec les villageois)
+
+Someone is in your back
+"Pss, 
+
+
+:: Gloomy alley {"position":"575,425","size":"100,100"}
+(set: $firstAppear to true)
+(for: each _element, ...$myArray)[
+	(if: _element is "Gloomy alley")[(set: $firstAppear to false)]
+
+]
+(if:$firstAppear is true)[
+At the bottom of the path, you discover a long, dimly lit alley that appears to lead to what seems to be a major street.
+About ten meters away, you can see a dog, next to which there is a man, asleep in his chair. This man is dressed in a way that reminds you of the attire worn by guards in old movies..
+
+What do you want to do ? 
+[[i'm going to kick the guard !]]
+[[i'm going to detach the dog !]]
+[[i'm just going to go through  ! |Market]]
+[[Oh i have chocolate on me ! i'm going to give it to this little dog ! ]]
+
+
+(set: $myArray to (a: ...$myArray, "Gloomy alley"))
+]
+
+
+
+
+
+:: Little garden {"position":"325,975","size":"100,100"}
+
+
+
+:: Market {"position":"475,725","size":"100,100"}
+
+(set: $firstAppear to true)
+(for: each _element, ...$myArray)[
+	(if: _element is "Market")[(set: $firstAppear to false)]
+
+]
+(if:$firstAppear is true)[
+
+While walking in the alley, you seem to hear voices speaking more and more loudly.
+The light is getting brighter. You see shadows moving.
+At the end of the alley, you find  an immense noisy place with a lot of people. 
+There are some market stall; and smells make you remembering you are hungry.
+
+Someone arrives in the back. It's a woman with a fisherman's outfit.
+She walks wobbly, maybe because she likes alcohol.
+She holds out a breaded fish towards you: "Ohoh little boy, you seems hungry ! take one of my delicious fish ! "
+
+
+
+You have little doubts. Why someone should help you? 
+
+
+[[I may accept it... | Fish accepted]]
+[[Sorry, I don't want your fish.]]
+(set: $myArray to (a: ...$myArray, "Market"))
+]
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+:: Oh i have chocolate on me ! i'm going to give it to this little dog !\  {"position":"350,525","size":"100,100"}
+
+
+
+You get out of your pocket a bar of chocolate.
+You feel happy giving it to the dog.
+But...you remember that dogs do not like chocolate.
+The dog begins to drool bubbles. A few minutes after, he is dead. 
+
+Oh...[[i'm just going to go through  ! |Market]]
+
+
+
+:: Sorry, I don't want your fish. {"position":"600,775","size":"100,100"}
+(set: $myArray to (a: ...$myArray, "Refused fish"))
+
+ou remember you are in a market and start wandering between the aisles.
+
+
+Far away, you can distinguish a foutain, and start walking in its direction.
+While walking, you understand that this village doesnt feel fair. A loot of people are living in poor living conditions while others are laughing. 
+But you have to escape from this village.
+
+During your walk, you find a panel wich represents a flower, with the words "Little garden".
+
+Do you prefer
+to go to [[the fountain |Fountain]]
+or to [[the little garden|Little garden]]
+
+
+
+
+
+
+:: i'm going to detach the dog ! {"position":"450,300","size":"100,100"}
+You detach the dog and feel happy doing the right thing.
+He starts growling: " GRRR waf waf"
+Because of that, you start to be anxious.
+
+The dog attacks you, not letting you any chance to survive.
+
+
+<h1>DEAD</h1>
+You returns to the [[Blood-Stained Altar]]
+
+
+
+:: i'm going to kick the guard ! {"position":"675,550","size":"100,100"}
+You start giving kicks to the guard.
+Unfortunately, he is well trained ! He wakes up, and starts crying "stupid monster !" while kicking you.
+You have any chance against this man.
+
+
+<h1>DEAD</h1>
+You returns to the [[Blood-Stained Altar]]
+
+
+:: inside the Castle {"position":"1100,425","size":"100,100"}
+(set: $myArray to (a: ...$myArray,'Hall' "))
+You arrive in a gigantic Hall....???
+
+
+:: join them {"position":"750,1225","size":"100,100"}
+You apologise  for spying them....
+villager with a big nose: "Why were you in this bush ? "
+You do not know what to reply.
+lame illager "What do you think about the king ?"
+
+[[The king can not be a bad person. What are you accusing him of?|reply 1]]
+[[All kings are the same. they are not nice persons. But what is the problem ? |reply 2]]
+
+
+
+
+:: no {"position":"450,1225","size":"100,100"}
+
+
+
+:: reply 1 {"position":"850,1350","size":"100,100"}
+happy
+
+lame villager :" It's true, they are all the same. However, this king  is completly crazy. After several murders, he instaured a curfew, saying there was a monster in the village. But i am sure it is false. It is his fault"
+
+What do you want to reply ? 
+[[Yes, you are completly in the truth|reply 3]]
+[[oh well... are you sure of this?  |reply 4]]
+
+
+:: reply 2 {"position":"675,1350","size":"100,100"}
+
+
+
+:: reply 3 {"position":"850,1475","size":"100,100"}
+(set: $myArray to (a: ...$myArray, "Gangster event"))
+Villagers are happy to hear that from someone they don't know.
+//TODOOOOOOOOOOO
+They start scattering.
+
+[[Fountain]]
+
+
+:: reply 4 {"position":"1000,1475","size":"100,100"}
+(set: $myArray to (a: ...$myArray, "knight"))
+
+villager with a big nose: "You won't trust me ? hm ? i know everything, he tried to summon a demon, to become immortal"
+
+You move away from the villager. 
+In your back, a man with his golden armor arrive, riding his horse. 
+
+the knight says: " Brave guy, you seems to be the purest heart i have ever seen in  this village!. From now, i declaring you a hero of the nation! you have my benediction. é
+
+you do not understand what is happening, but you agree.
+
+After that, the knight leaves you, and the villagers, disgusted by you, leave the place.
+
+[[Fountain]] 
+
+
+:: see myself in the water {"position":"575,1100","size":"100,100"}
+You watch yourself in the water. 
+you feel nauseous without knowing why you feel that.
+
+At the bottom of the fountain, you see a lot of coins.
+do you want to take those coins?
+[[yes]]
+[[no]]
+
+
+:: spy those villagers {"position":"750,1100","size":"100,100"}
+You start spying those strange villagers. 
+
+villager with a big nose: "The king is not a nice guy, he established a curfew"
+villager with one arm: " I don't believe  night monsters  are real. I think the king is crazy"
+villager with one ear: "HEY YOU!  in the bush"
+He is looking at you
+villagers: "Yes you ! Come here !! what do you think about it ????"
+
+[[join them]]
+
+
+:: yes {"position":"575,1225","size":"100,100"}
+(set: $myArray to (a: ...$myArray, "Coin"))
+
+
