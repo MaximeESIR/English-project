@@ -1,0 +1,762 @@
+:: StoryTitle
+Hestia
+
+
+:: StoryData
+{
+  "ifid": "1004610C-F4E6-4CD2-AF30-EFF736C8E8C3",
+  "format": "Harlowe",
+  "format-version": "3.3.8",
+  "start": "Blood-Stained Altar",
+  "zoom": 1
+}
+
+
+:: \ Fish accepted {"position":"300,775","size":"100,100"}
+(set: $Fish_accepted to true)
+
+
+You take the fish and start to eat it.
+The seawoman's voice interrupts you thoughts:"Oh oh, it seems you like it. If you have money, come back to me ! i am going to the port, and i have a fantastic boat ! "
+After that, she starts walking away slowly.
+
+
+You remember you are in a market and start wandering between the aisles.
+
+Far away, a foutain catches your eyes, and you set off in its direction.
+As you walk, the injustices of the village become evident. Some laugh while others struggle in poverty. Nevertheless, your focus remains on escaping this place  !
+
+During your walk, you find a panel depicting a flower with the words "Little garden".
+
+Do you prefer
+to go to [[the fountain |Fountain]]
+or to [[the little garden|Little garden]]
+
+
+:: \ hero {"position":"900,500","size":"100,100"}
+En tant que héro de la nation, vous pensez pouvoir parler à un garde et lui demander quand la porte ne sera pas surveillée avant de pouvoir vous enfuir.
+
+Vous vous avancez alors d'un ton certains vers l'un des gardes qui semble être le plus haut gradé.
+
+(color:purple)[You]: "Serait-il"
+
+Vous vous arretez de parler, et ressentez une horrible douleur dans votre abdomen. Malheureusement pour vous, il semble que la rumeur d'une personne soutenant le roi et ayant été fait héro ait atteint les oreilles des personnes qu'il ne fallait pas. Vous vous écroulez sur le sol
+
+
+
+¨PROBLEME: je dvp pas pour le moment car c'est relou si j'ai pas le temps de finir d'écrire ca
+
+
+:: \ no risque {"position":"1125,425","size":"100,100"}
+Par crainte de de ne réveiller le garde, vous préférez laisser tomber cette opportunité.
+En arrivant au bout du couloir, vous trouvez à votre gauche un casier laissé ouvert. Enfin une opportunité pour vous de vous évader: un équipement de garde y a été laissé à l'abanddon.
+
+Vous décidez alors de vous changer.
+
+Que voulez vous faire?
+[[Ressortir du batiment|sortir]]
+[[Retourner chercher chercher l'emplois du temps |risque]]
+(set: $guard_outfit to true)
+
+
+:: Blood-Stained Altar {"position":"875,325","size":"100,100"}
+(if: $AltarDiscovered is not true)[
+
+<h1>You awaken in a dirty cellar</h1>
+The air is heavy and disturbing. As your eyes adjust to the darkness, you realize you are lying on a cold stone altar, where you can see ominous bloodstains.
+You can hear a eerie silence, broken only by the sound of water drops falling from the ceilling.
+
+A shiver runs through you while you try to make sens of what is happening.
+Your senses heightened in this unsettling moment, you have to find an exit, and quickly ! 
+
+
+Facing a crucial decision, you can see 2 roads in the shadow. The first ascends. The second descends. Maybe one of this path can take you out...
+
+You choose: [[the first path|Gloomy alley]] or [[the second path|inside the Castle]]
+(set: $AltarDiscovered to true)
+
+]
+
+
+:: Fountain {"position":"625,950","size":"100,100"}
+
+(if:$Fountain_discovered is not true)[
+You arrive at the Fountain.
+Everything seems to be wonderful around you. The enchanting architecture dive you in a fantasist world.The symphony of flowing water, melodious bird songs, and the villagers speaking creates a vibrant atmosphere.
+
+Feeling captivated by the scene, you contemplate your next action:
+
+(if: $temp1 is not true)[[see myself in the water]]
+ [[spy those villagers]]
+
+
+
+]
+
+
+(if: $resistant is true)[
+
+
+Quelsques instant plus tard, des personnes habilées d'un sombre pparraissent sur la place. L'ambiance d ece lieu si charmant change du tout au tout.
+
+D'une démarche certaine, l'une des personnes décide de venir vous parler
+"Vous êtes celui dont on nous a parlé, celui qui comprend le peuple"
+Vous acquissez ! ne sachant pas trop ce qui se passe devant vous
+"Nous sommes la résistance face à ce roi fou. Mais tu viens de trés loin... tu ne connais pas notre histoire!"
+Des résistants ? ils sont peut être dangereux vous vous dites ! 
+L'homme devant vous vous propose alors de se joindre à eux pour une réunion trés importante qui débutera le début d'une révolte. Il vous transmet l'adresse de la maison.
+
+Voulez vous vous rendre à cette réunion ? Ou alors, bon citoyen que vous voulez être, vous décidé de dénoncer ces anti-royalistes  ! 
+
+Je devrais me joindre à eux. C'est une opportunité pour moi m'enfuir
+[[to the meeting |Old warehouse ]]
+
+Mais je pourrais aussi profiter de cette situation en les denoncant aux gardes!
+[[denoncer les gardes|Guards’ barracks]]               
+]
+
+(if: $Hero is true)[
+De retour à deux pas de la fontaine, vous vous demandez vraiment si cette histoire n'est pas un cauchemar. Comment allez vous donc pouvoir vous échaper de ce village mystérieux?
+
+Mais désormais, vous semblez être bien vu par la garde de ce dernier. Peut-être que vous pourrez vous servir de ces personnes pour vous échapper. 
+Pendant que vous imaginez toutes sortes de scénarios, un homme qui passait devant vous lache une feuille par terre. Lorsque vous la ramassez, vous pouvez lire ces mots qui provoquent en vous une grande peur
+"Leave, or they will kill you"
+
+Est-ce un message pour vous? Bien-sur, vous êtes désormais seul à cette fontaine.
+
+Que souhaitez vous faire dans cette sitution? 
+[[Aller voir les gardes |Guards’ barracks]]
+
+]
+
+
+:: Furtif {"position":"1025,775","size":"100,100"}
+Alors que les gardes ne regardent plus dans la direction de la porte, 
+vous en profitez pour rentrer. Le batiment est assez sale et ce n'est pas bien rangé, sans compter l'odeur de sueur qui reigne. Les moyens ne semblent pas avoir étés mis pour assurer la sécurité des civils.
+
+Alors que vous avancez dans ce sombre couloir, vous voyez à droite de vous, à travers une fenêtre ce qui vous semble être un emplois du temps dans une petite salle. Mais malheureusement, un garde qui semble assoupi est assis sur le bureau.
+
+Voulez vous vous risquer à entrer?
+[[Oui ! |risque]]
+[[Non ! | no risque]]
+
+
+
+:: Gloomy alley {"position":"575,425","size":"100,100"}
+
+(if:$Gloomy_alley_Discovered is not true)[
+At the bottom of the path, you discover a long, dimly lit alley that appears to lead to what seems to be a major street.
+About ten meters away, you can see a dog, next to which there is a man, asleep in his chair. This man is dressed in a way that reminds you of the attire worn by guards in old movies..
+
+What do you want to do ? 
+[[i'm going to kick the guard !]]
+[[i'm going to detach the dog !]]
+[[i'm just going to go through  ! |Market]]
+[[Oh i have chocolate on me ! i'm going to give it to this little dog ! ]]
+
+
+(set: $Gloomy_alley_Discovered to true)
+
+]
+
+
+:: Guards’ barracks {"position":"875,875","size":"100,100"}
+(set: $Guard_barrack_discovered to true)
+(if:$Hero is true)[
+Vous arrivez devant un batiment où vous semblez appercevoir de nombreux garde: c'est leur batiment principal.
+
+Ils sont nombreux, mais il semble qu'une porte n'est pas surveillée. 
+Souhaitez vous:
+[[Tenter de rentrer par cette porte |Furtif]]
+[[Rentrer en tant que hero de la nation | hero]]
+
+]
+
+(if: $resistant is true)[
+
+]
+
+
+:: Little garden {"position":"75,875","size":"100,100"}
+(set: $Little_garden_discovered to true)
+
+(if:$analyse is true)[
+Afin de vous détacher de l'ambiance tendue du quartier de la résistance, vous arrivez au Little garden. Une petite maisonnette attire votre oeil par son charme. à coté de celle-ci, une haie vous empêche de voir ce qu'il se passe dans ce coin.
+
+Ainsi, vous vous dirigez vers un trou dans la haie, indiqué par un panneau OPEN.
+En traversant la haie, vous ressentez la douceur de la nature. Les odeurs vous montent au nez pendant que le vent caresse votre peau. Mais vous vous reprennez.
+
+Parcourant les allées de ce jardin, vous remarquez à un endroit une sorte de tombe, avec à coté une statut 'un homme  portant la couronne: un ancien roi?
+Au pied de la tombe, un petit homme semble sanglotter et prier.
+
+Voulez-vous le déranger dans sa prière?
+[[oui |rencontre roi]]
+[[non|laisser prier]]
+
+]
+
+(if:$abandon is true)[
+Vous avez abandonné l'idée de vous enfuir par la porte principale.
+vous arrivez au Little garden. Une petite maisonnette attire votre oeil par son charme. à coté de celle-ci, une haie vous empêche de voir ce qu'il se passe dans ce coin.
+
+Ainsi, vous vous dirigez vers un trou dans la haie, indiqué par un panneau OPEN.
+En traversant la haie, vous ressentez la douceur de la nature. Les odeurs vous montent au nez pendant que le vent caresse votre peau. Mais vous vous reprennez.
+
+Parcourant les allées de ce jardin, vous remarquez à un endroit une sorte de tombe, avec à coté une statut 'un homme  portant la couronne: un ancien roi?
+Au pied de la tombe, un petit homme semble sanglotter et prier.
+
+Voulez-vous le déranger dans sa prière?
+[[oui |rencontre roi]]
+[[non|laisser prier]]
+
+]
+(else:)[
+ (if:$Fish_accepted is true)[Une femme vous a offert son poisson](if:$Fish_accepted is false)[vous avez refusé le poisson de cette femme.] 
+ Vous êtes actuellement un peu perdu. 
+ 
+ Comment allez vous pouvoir vous échapper? A cette idée, vous vous enervez, et donnez un gros coup de pied dans une jardiniaire. Mince....
+ Une vieille femme, possédant un chapeau sur lequel nous distinguons un tournesol, arrive en criant:
+ (color:green)[old woman]:"Mais qu'avez vous fait? ma fleur, ma pauvre fleur. MONSTRE! vous avez tué ma fleur. Les fleurs sont vivantes, elles respirent, elles méritent qu'on les chérissent, qu'on les aimes"
+ 
+ Vous ne savez vraiment plus où vous mettre! Aie..... très embarassé, vous décidez de retourner sur vos pas. Seul solution, la [[Fountain]]
+ 
+ 
+ 
+]
+
+
+:: Market {"position":"475,725","size":"100,100"}
+
+(if:$Market_discovered is not true)[
+
+While walking in the alley, the cacophony of voices grows louder.
+The light is getting brighter. You see shadows moving.
+Emerging from the alley's depths, you find  yourself in a immense noisy place with a lot of people. 
+There are some market stall; and savory aromas stir your hunger..
+
+A figure approoaches from behind. It's a woman dressed in the attire of a fisherman.
+She walks wobbly, maybe because she likes alcohol.
+She holds out a breaded fish towards you with a jovial smile: "Ohoh little boy, you seems hungry ! take one of my delicious fish ! "
+
+YYou are skeptic. Why would a stranger extand suck generosity? 
+You pause, weighing your options. You sense sincerity. What do you want to do?
+
+[[I may accept it... | Fish accepted]]
+[[Sorry, I don't want your fish.]]
+(set: $Market_discovered to true)
+]
+
+
+:: Oh i have chocolate on me ! i'm going to give it to this little dog !\  {"position":"350,525","size":"100,100"}
+You get out of your pocket a bar of chocolate.
+You feel happy giving it to the dog.
+But...you remember that dogs do not like chocolate.
+The dog begins to drool bubbles. A few minutes after, he is dead. 
+
+Oh...[[i'm just going to go through  ! |Market]]
+
+
+:: Old warehouse\  {"position":"1000,1100","size":"100,100"}
+Vous arrivé au quartier où s'est établie la résistance. 
+La rue est assez sombre, en contraste avec la pluspart des lieux que vous avez pu visiter jusqu'à aujourd'hui.
+
+Au coin de la rue, la maison que vous a indiqué le résistant est bien là. Vous hésitez à rentrer, ne sachant pas réelllement ce qui pourrait ce produire. Mais votre quête de liberte vous rappelle que c'est peut-être votre unique chance de vous en sortir. 
+
+[[entrer dans la maison|entrer]]
+[[analyser la ruelle|analyse]]
+
+
+
+
+
+
+:: Sorry, I don't want your fish. {"position":"675,800","size":"100,100"}
+
+
+You remember you are in a market and start wandering between the aisles.
+
+Far away, a foutain catches your eyes, and you set off in its direction.
+As you walk, the injustices of the village become evident. Some laugh while others struggle in poverty. Nevertheless, your focus remains on escaping this place  !
+
+During your walk, you find a panel depicting a flower with the words "Little garden".
+
+Do you prefer
+to go to [[the fountain |Fountain]]
+or to [[the little garden|Little garden]]
+
+
+:: Village door {"position":"1675,775","size":"100,100"}
+Vous arrivez dans un boulevard qui méne à une immense porte en métal. Le village est entouré de vieux ramparts qui vous vont comprendre que les moyens de s'échapper sont limités.
+
+(if: $guard_outfit is true)[
+	(if:$schedule is true)[
+    	équipé de votre tenue de garde et de leur emplois du temps, vous attendez le moment opportun pour passer cette porte qui constitue le dernier rempart face à votre liberté.
+        (if: $know_truth is not true)[
+        	Vous ne connaisez par réellement les raisons  de votre enlévement ni qui vous êtes réellement. Mais vous êtes certain que s'enfuir est la meilleure chose à faire. Vous commencez à vous approcher de la porte lorsque aucun garde n'est plus là, et vous éloignez du village  
+            [[end]]
+        ]
+        
+    ]
+
+    (if:$schedule is not true)[
+    Equipé de votre tenue de garde, vous ne savez pas réellement quand vous pourriez tenter de fuir ni si cela est même possible. Cependant,  en tant que garde, ne devriez vous pas pouvoir sortir quand vous le voulez? 
+    
+    [[Tenter de sortir |tentative_sortie ]]
+    [[Abandonner l'idée de sortir |abandon]]
+    
+    ]
+]
+
+(if: $guard_outfit is not true)[
+(if: $schedule is true)[
+Vous n'avez qu'avec vous un emplois du temps pour tenter de vous enfuire. Est-ce vraiment judicieux de sortir par la grande porte? 
+[[tenter de sortir|tentative sortie2]]
+[[abandonner cette sortie|abandon]]
+
+]
+]
+
+(set:$Village_door_discovered to true)
+
+
+:: abandon {"position":"1750,450","size":"100,100"}
+Vous décidez d'abandonner l'idée de sortir par la porte principale.  Une sage décision, car vous sentez que cela aurait pu mal terminer.
+
+(if: $Little_garden_discovered is not true)[
+Vous vous souvenez avoir croisé un panneau indiquant Little garden, voulez vous vous [[diriger vers le Little garden|Little garden]] 
+]
+
+(if: $Little_garden_discovered is true)[
+	(if:$Fish_accepted is true)[Mais tiens... vous vous souvenez qu'une femme vous a invité à monter dans son bateau. Vous aviez jusqu'à là oublié son existence car vous ne pensiez pas que ceci puisse marcher. Mais c'est votre derniere option. [[aller au port|port]]]
+
+]
+(set:$abandon to true)
+
+
+:: adouble {"position":"1225,1025","size":"100,100"}
+(color:purple)[You]: 'Guards , i am an hero of the nation. Why i am here???"
+
+Plusieurs secondes, le garde qui vous a tiré dessus arrive:
+(color:red)[Guard]:"Pourquoi donc vous être faufilé dans mon bureau si vous êtes un héro de la nation? ahah"
+
+Vous ne savez pas vraiment quoi répondre, mais décidez de tenter le tout pour le tout. Aprés tout, peut être qu'un héro de la nation peut avoir l'emplois du temps des gardes
+
+(color:purple)[You]:" Car je ne voulais pas vous réveiller! Je souhaitais juste connaitre l'emplois du temps des gardes"
+
+(color:red)[Guard]:"Et encore une fois  pourquoi je vous le donnerais?"
+
+
+Que décidez vous de répondre:
+Je voulais faire une surprise à l'un des gardes, mais pour cela j'ai besoin de savoir quand il n'y aura personne [[à la porte du village|apprendre emplois ]]
+
+Je souhaitais m'enrôler dans la milice, donc[[ je voulais connaitre nos emplois du temps |apprendre emplois ]]
+
+
+
+
+
+
+:: analyse {"position":"1025,1325","size":"100,100"}
+	Vous analysez la rue. A quelques endrotis celle-ci, vous pouvez apercevoir des personnes sans abris, ce qui n'est pas sans vous rappeler l'ambiane sinistre à laquelle vous avez été confrontée dans une partie du marché.
+    
+    (if:$Little_garden_discovered is not true)[
+    Vous vous rappelez aussi du petit jardin auquel vous n'êtes pas aller. Peut-êtes voudriez vous aller y faire un tour? Aprés tout, on ne vous a jamais dit qu'il fallait venir tout de suite, on ne vous en voudrait pas [[Little garden]]
+    (set: $analyse to true)
+    ]
+    
+     (if:$Little_garden_discovered is true)[
+     Mais rien de plus intéressant.  Vous décidez alors de [[rentrer dans la maison|entrer]]
+     ]
+
+
+:: apprendre emplois\  {"position":"1300,1175","size":"100,100"}
+
+(color:red)[Guard]:" Mais il fallait le dire plus tôt camarade."
+
+Le garde vous libére alors et vous emméne alors dans son bureau. 
+Il vous tend alors le planning, le temps que vous enregistrez en mémoire les différents moment de la jorunée.
+
+
+(color:purple)[You]: 'Merci beaucoup. Je vais pouvoir faire ce que j'ai à faire"
+
+
+Vous vous dirigez ensuite vers la porte principale et sortez.
+Vous disposez désormais d'une information qui pourrait vous permettre de vous enfuire de ce village.
+Vous pouvez [[sortir|sortir]]
+
+(set: $schedule to true)
+
+
+
+:: bad end1 {"position":"1575,1575","size":"100,100"}
+Félicitation, vous avez terminé le jeu.
+
+Cependant, pas de la meilleure des facons, car il semblerait que vous alliez passer le reste de votre vie sous terre pour trahison au roi.
+Rien ne pourra plus sauver.
+
+(if: $know_truth  is not true)[
+Aussi, vous n'avez pas réussi à faire le jeu en entier! Qui êtes vous? pourquoi êtes vous ici? tant de questions auxquels vous auriez pu répondre si vous n'étiez pas passé devant certaines actions. En effet, Le roi, élu par les Dieux possède toutes les réponses.
+]
+
+
+:: cry\  {"position":"1375,1025","size":"100,100"}
+Vous commencez alors à hurler. 
+Malheureusement, il semble courrant que des prissoniers crient car personne ne réagit..
+[[continue |prison]]
+(set: $cry to true)
+
+
+:: end {"position":"2000,825","size":"100,100"}
+Félicitation, vous avez réussi à sortir du village.
+(if: $Hero is true)[ Vous avez même réussi à devenir un héro d'une nation que vous ne connaissez pas...]
+(if: $resistant is true)[ Vous avez même réussi à devenir un resistant aux yeux des villageois d'un village que vous ne connaissez pas]
+(if: $guard_outfit is true)[ Pour votre collection personnelle pour avez obtenu un magnifique traillit ! ]
+(if: $schedule is true)[qu'allez vous bien pouvoir faire de cet emplois du temps? il ne vous sert plus à rien]
+
+(if: $know_truth  is not true)[
+Malheureusement vous n'avez pas réussi à faire le jeu en entier! Qui êtes vous? pourquoi êtes vous ici? tant de questions auxquels vous auriez pu répondre si vous n'étiez pas passé devant certaines actions. En effet, Le roi, élu par les Dieux possède toutes les réponses.
+]
+
+
+:: entrer {"position":"1250,1325","size":"100,100"}
+D'un pas hésitant, vous entez dans ce lieu, ne sachant pas à quoi vous attendre.
+
+A peine entré, un homme vous bloque le passage. "Mot de passe ?"
+Vous ne savez pas quoi répondre. Aucun mot de passe ne vous a été transmis ! 
+
+Soudain, un second homme que semblez reconnaitre crie "C'est bon, laisse le passer. Il est nouveau. n'oublie pas, le mot de passe est "TAMBEG" (set mdp connu)"
+
+Vous prenez une grande inspiraiton, soulagé que la situation soit sauvée. Vous répétez mentalement ce mot de passe dans votre tête afin d'être certains de pouvoir vous en souvenir.
+
+Aprés un bref échange avec l'homme qui a tenté de vous arrêter, vous avancez dans la demeure, vous impreignant de l'espace environnant. A l'interieur, l'athmosphere est tendue. Des hommes et des femmes discutent à voix basse, ou examinent des plans sur des cartes. Vous êtes perdu, ne sachant pas quoi faire. Mais vous voulez vous enfuir de ce village, et devez vous intégrer.
+Vous cherchez du regard quelqu'un prêt à vous guider, ou à vous donner une idée de quoi faire ensuite. Finalement, vous croisez le regard d'une personne assise à une table, concentrée sur une carte détaillée de la région. Vous vous avancez et vous présentez. 
+
+La personne acquiésse. L'homme commence à vous présenter son plan détaillé afin de voler les emplois du temps des gardes. Elle vous explique qu'il existe une fenêtre d'opportunité pendant la nuit où les emplois du temps sont transférés d'un poste de garde à un autre. C'est à ce moment que vous devez frapper.
+
+Elle vous indique l'emplacement du batiment où se trouve le bureau contenant les documents recherchés et vous fournit des informations sur les patrouilles des gardes pendant la nuit. Vous êtes conseillé sur les meilleures routrs à emprunter afin d'éviter la patrouille de nuit, et possiblement de vous faire tuer. Elle vous encourage à rester discret, à ne pas attirer l'attention des gardes. Une fois que vous avez toutes les informations nécessaires, vous vous préparez mentalement à ce qui va maintenant se produire. déterminé à réussir pour pouvoir enfin fuir ce village et trouver la liberté que vous recherchez
+
+[Aller voler l'emplois du temps |Guards’ barracks]
+
+(set: $old_warehouse_discovered to true)
+
+
+
+
+:: i'm going to detach the dog ! {"position":"450,300","size":"100,100"}
+You detach the dog and feel happy doing the right thing.
+He starts growling: " GRRR waf waf"
+Because of that, you start to be anxious.
+
+The dog attacks you, not letting you any chance to survive.
+
+
+<h1>DEAD</h1>
+You returns to the [[Blood-Stained Altar]]
+
+
+:: i'm going to kick the guard ! {"position":"675,550","size":"100,100"}
+You start giving kicks to the guard.
+Unfortunately, he is well trained ! He wakes up, and starts crying "stupid monster !" while kicking you.
+You have any chance against this man.
+
+
+<h1>DEAD</h1>
+You returns to the [[Blood-Stained Altar]]
+
+
+:: inside the Castle {"position":"975,125","size":"100,100"}
+
+
+(if: $firstAppear)[
+You arrive in a gigantic Hall....??? 
+]
+
+
+:: join them {"position":"750,1225","size":"100,100"}
+You apologise  for spying on them.
+
+(color:red)[Bignose]: "Why were you in this bush ? "
+You do not know what to reply. As you hesitate, another villager starts talking.
+
+(color:blue)[Oneharm]  "What do you think about the king ?"
+
+[[The king can not be a bad person. What are you accusing him of?|reply 1]]
+[[All kings are the same. they are not nice persons. But what is the problem ? |reply 2]]
+
+
+:: laisser prier {"position":"125,1125","size":"100,100"}
+	Vous laissez le petit homme prier. En effet, il n'est pas très poli d'interrompre quelqu'un qui pleure sur une tombe! 
+
+  Bon, vous avez assez attendu, et le soleil commence à tomber. Alors que vous vous appretez à partir, vous rencontrez une vieille femme avec un petit chapeau sur lequel vous distinguez un tournesol. C'est probablement elle qui tient cette endroit.
+  
+ Arrivé à sa hauteur, la femme vous remercie de ne pas avoir interrompu le roi pendant sa priére. 
+ Quoi, le roi? vous vous retournez, mais il n'y a plus personne. Vous avez loupé l'occasion de confronter une personne qui en sait sur vous.
+ 
+ 
+ Plus tard, vous êtes de retour dans le quartier de la résistance.
+ [[entrer|entrer]]
+
+
+:: no {"position":"275,1275","size":"100,100"}
+Tu n'est pas un voleur. Il te semble que ces pièces sont une sorte de sacrifice faite par des villageois dans l'espoire qu'une force les aide. Cela vous attriste, et vous décidez de retourner au milieu de la place
+return to the [[Fountain]]
+(set: $temp1 to true)
+
+
+:: port {"position":"1850,200","size":"100,100"}
+
+
+
+:: prison {"position":"1225,900","size":"100,100"}
+Vous vous réveillez avec un mal de crâne et mettez quelques secondes à vous souvenir de ce qu'il s'est produit, ressantant la douleur dans votre poitrine.
+Lorsque vous tournez la tête, vous êtes choqué: des barreaux.
+Durant votre sommeil, les gardes en ont profité de votre torpeur pour vous y placer.
+Vous qui vouliez fuir, vous voilà enfermé. 
+
+Comment comptez vous vous en sortir? 
+[[Leur rappeler qu'un chevalier vous a adoublé |adouble]]
+(if: $cry is not true)[[Crier de toutes vos forces |cry ]]
+
+
+:: rencontre roi {"position":"225,1025","size":"100,100"}
+(set:$king_discovered to true)
+(if:$analyse is true)[
+Vous vous avancez vers le ptit homme et lui tappez sur l'épaule.
+D'un sursaut, il se retourne et commence à vous parler:
+(color:red)[little_boy]:"Comment osez vous me toucher pendant que je cherche à contacter mon prédecesseur?"
+
+Quoi? mais.... c'est le roi? D'un coup, vous vous demandez s'il sait.
+(color:red)[King]:"Toi.... je te reconnait. Comment as-tu osé t'enfuire de là. "
+
+Pendant qu'il continue de parler, une image vous revient en tête. Vous, attaché, avec en face de vos yeux une pendule qui vascille de gauche à droite.
+Qu'est ce que cela signifie!"
+
+
+(color:purple)[You]: "Pourquoi je suis ici", dis-tu en soulevant le petit roi par son col
+
+(color:red)[King]:"Celui qui te tuera, maudit démon. Toi qui a tant martyrisé mon peuple, Dieu nous permettra de te vaincre"
+
+Vous ne comprennez rien, mais vous sentez au fond de vous que quelque chose cloche. Pourquoi ne vous rappelez vous de rien? pourquoi veut-il vous tuer? enfin... vu sa taille il ne peut pas.
+
+Un crie se fait entendre.
+C'est le roi, il appelle  à l'aide, ses gardes vont probablement répliquer! 
+
+(color:red)[King]:" Si jamais tu as réellement changé, tu viendras au chateau afin d'apprendre la vérité"
+
+Vous vous mettez à courir.
+De retour au quartier de la résistance, vous tentez d'oublier cette histoire
+[[entrer |entrer]]
+]
+
+
+(if:$abandon is true)[
+
+Vous vous avancez vers le ptit homme et lui tappez sur l'épaule.
+D'un sursaut, il se retourne et commence à vous parler:
+(color:red)[little_boy]:"Comment osez vous me toucher pendant que je cherche à contacter mon prédecesseur?"
+
+Quoi? mais.... c'est le roi? D'un coup, vous vous demandez s'il sait.
+(color:red)[King]:"Toi.... je te reconnait. Comment as-tu osé t'enfuire de là. "
+
+Pendant qu'il continue de parler, une image vous revient en tête. Vous, attaché, avec en face de vos yeux une pendule qui vascille de gauche à droite.
+Qu'est ce que cela signifie!"
+
+(color:purple)[You]: "Pourquoi je suis ici", dis-tu en soulevant le petit roi par son col"
+
+Vous êtes fou de rage. Vous n'avez pas réussi à vous enfuire de ce maudit village, et c'est à cause de cet homme
+
+]
+
+
+:: rep1 {"position":"1600,1225","size":"100,100"}
+(color:red)[Guard]:" Scruter les alentours du village? vous devriez savoir que plus personne n'a le droit de quitter l'enceinte des murs. Gardes, arretez le"
+
+Pris de panique, vous commencez à courir. Mais vous n'êtes pas un grabd atléte, et les gardes vous mettent rapidement au sol. Malheureusement pour vous, vous ne verrez plus jamais la lumière du jour, étant donné que les gardes ont décidé de vous enfermer dans les entrailles du chateau, 10 pas sous terre.
+
+
+[[end |bad end1]]
+
+
+:: rep2 {"position":"1675,1300","size":"100,100"}
+(color:red)[Guard]:" Se balader? vous devriez savoir que plus personne n'a le droit de quitter l'enceinte des murs. Gardes, arretez le"
+
+Pris de panique, vous commencez à courir. Mais vous n'êtes pas un grand atléte, et les gardes vous mettent rapidement au sol. Malheureusement pour vous, vous ne verrez plus jamais la lumière du jour, étant donné que les gardes ont décidé de vous enfermer dans les entrailles du chateau, 10 pas sous terre.
+
+En même temps, quelle idée de demander à aller à se promener quand on sait tout les problémes qui hantent ce village?
+
+[[end |bad end1]]
+
+
+:: rep3 {"position":"1825,1325","size":"100,100"}
+(color:red)[Guard]:"Nous remplacer? mais notre tour de garde ne termine que dans 8 minutes"
+(color:purple)[You]:"Oui, les ordres pour vous sont maintenant de retourner au QG. Le chef a des choses à vous dire"
+(color:red)[Guard]:"D'accord. Mais fais bien attention, cette semaine de nombreuses personnes ont déja tenté de s'échapper par la grande porte, et la prison du chateau est pleine. Pauvres gens.... enfin c'est les ordres. Bonne chance."
+
+
+        (if: $know_truth is not true)[
+        	Vous ne connaisez par réellement les raisons  de votre enlévement ni qui vous êtes réellement. Mais vous êtes certain que s'enfuir est la meilleure chose à faire. Alors que les gardes disparaissent à l'horizon, la joie monte en vous. Vous poussez la porte, et partez
+            [[end]]
+        ]
+
+
+:: reply 1 {"position":"850,1350","size":"100,100"}
+(set: $Fountain_discovered to true)
+(set: $Hero to true)
+
+(color:green)[Oneear]:"  this king  is completly crazy. After several murders, he instaured a curfew, saying there was a monster in the village. But i am sure it is false. It is his fault"
+
+Vous ne comprennez pas vraiment ce qui pousse ce villageois à penser ca. En effet, pourquoi le roi serait forcément le fautif. Au contraire, le roi semble vouloir protèger ses sujets, ce qui vous semble très noble de sa part. 
+
+You move away from the villager. 
+In your back, a man with his golden armor arrive, riding his horse. 
+
+the knight says: " Brave guy, you seems to be the purest heart i have ever seen in  this village!. From now, i declaring you a hero of the nation! you have	 my benediction. 
+
+you do not understand what is happening, but you agree.
+
+After that, the knight leaves you, and the villagers, disgusted by you, leave the place.
+
+[[Fountain]]
+(set: $Fountain_discovered to true)
+(set: $Hero to true)
+
+
+:: reply 2 {"position":"675,1350","size":"100,100"}
+(color:green)[Oneear]:" It's true, they are all the same. However, this king  is completly crazy. After several murders, he instaured a curfew, saying there was a monster in the village. But i am sure it is false. It is his fault"
+
+What do you want to reply ? 
+[[Yes, you are completly in the truth|reply 3]]
+[[oh well... are you sure of this?  |reply 4]]
+
+
+:: reply 3 {"position":"600,1500","size":"100,100"}
+The villagers nod in agreement. They are determinated, and it's clear your words have resonated with them. They are happy to find solidarity in someone new. 
+As they scatter, i can see the hope in their eyes, the hope to defeat the oppressive regime that plagued their lives. 
+Encouraged by what they say, you want to do somethign for them. If it can help you to leave this village.
+
+[[Fountain]]
+(set: $Fountain_discovered to true)
+(set: $resistant to true)
+
+
+
+:: reply 4 {"position":"750,1500","size":"100,100"}
+
+
+(color:red)[Bignose] "You won't trust me ? hm ? i know everything, he tried to summon a demon, to become immortal"
+
+You move away from the villager. 
+In your back, a man with his golden armor arrive, riding his horse. 
+
+the knight says: " Brave guy, you seems to be the purest heart i have ever seen in  this village!. From now, i declaring you a hero of the nation! you have	 my benediction. 
+
+you do not understand what is happening, but you agree.
+
+After that, the knight leaves you, and the villagers, disgusted by you, leave the place.
+
+[[Fountain]]
+(set: $Fountain_discovered to true)
+(set: $Hero to true)
+
+
+
+:: risque {"position":"1175,750","size":"100,100"}
+Alors que vous ouvrez la porte, votre coeur se crispe. En effet, vous ne pensiez pas qu'ouvrir une porte si lourde ferait autant de bruit.
+
+(if: $guard_outfit is not true)[
+Vous vous retrouvez face à un garde qui semble vraiment étonné de vous voir ici. En effet, ce n'est pas commun qu'un civil tente de rentrer discrétement dans son bureau.
+Mais rapidement, le garde prends peur et dégaine son arme. Vous n'avez pas le temps de vous exprimer qu'une balle est tirée... ou plûtot ue fléchette. Vous commencez à voir floue, et tombez au sol
+
+[[continue |prison]]
+]
+(if: $guard_outfit is true)[
+Vous vous retrouvez face à un garde étonné de vous voir rentrer discrétement dans son bureau.
+(color:red)[Guard]:"Mais qu'est ce que tu es entrain de faire? tu veux quelque chose?"
+
+(color:purple)[You]:"Je ne voulais pas te réveiller. Tu pourrais me prêter l'emplois du temps? je ne me souviens plus vraiment que je suis de tour de garde"
+
+Vous esperez que vous coup de bluff passe
+
+(color:red)[Guard]:"C'est toi le nouveau? tiens, mais tâche de ne plus l'oublier, c'est mon dernier exemplaire. Tu sais très bien que le roi est sur ses gardes depuis que la créature s'est échappée"
+
+Mais de quelle créature est-il entrain de parler? 
+Pleins de questions, le garde vous demande de sortir
+(set: $schedule to true)
+[[sortir |sortir]]
+]
+
+
+
+:: see myself in the water {"position":"400,1100","size":"100,100"}
+As you peer into the water, your reflection gazes back at you.
+But you feel nauseous without knowing why you feel that, leaving you unsettled.
+
+Despite the discomfort, your eyes are drawn at the botoom of the fountain, where coins catch your attention.
+Do you want to take them ?
+[[yes]]
+[[no]]
+
+
+:: sortir {"position":"1350,650","size":"100,100"}
+Heureux des choses que vous avez pu dénicher, vous sortez par la porte principale avec en votre possesion:
+(if: $schedule is true)[-Un emplois du temps]
+(if:$guard_outfit is true)[-Une tenue de garde]
+
+
+
+vous voulez vous[[diriger vers la porte principale |Village door]] dans le but de vous échapper.
+
+
+
+:: spy those villagers {"position":"750,1100","size":"100,100"}
+You start spying those strange villagers.  After a few minuts, you understand their names
+
+(color:red)[Bignose] "The king is not a nice guy, he established a curfew"
+
+(color:blue)[Oneharm]  " I don't believe night monsters are real. I think the king is crazy"
+
+(color:green)[Oneear] : "HEY YOU!  in the bush"
+
+*He is looking at you*
+
+villagers: "Yes you ! Come here !! what do you think about it ????"
+
+[[join them]]
+
+
+:: temp {"position":"1500,1150","size":"100,100"}
+	La prochaine ronde est arrivée. Lorsque les gardes partent, vous courrez en direction de la porte. Mais... la porte est lourde! Le temps d'arriver à l'ouvrir, vous voyez derriere vous 2 gardes arriver en courrant. Vous réussisez à ouvrir la porte, mais à peine vous franchissez cette derniere que les gardes vous mettent au sol.
+
+Une minute, c'était vraiment court.
+
+[[end |bad end1]]
+
+
+:: tentative sortie2 {"position":"1675,900","size":"100,100"}
+Armé de votre emplois du temps, vous remarquez qu'entre chaque ronde des gardes, un intervalle de 1 minute vous permet de pouvoir vous échapper.
+
+voulez vous [[abandonner |abandon]]
+[[continuer|temp]]
+
+
+
+
+
+:: tentative_sortie\  {"position":"1675,1100","size":"100,100"}
+Vous vous approchez d'immense porte en métal.
+De chaque coté de la porte, un garde.
+(color:red)[Guard]:" HALTE. Que venez vous faire ici?"
+
+ J'ai pour mission d'aller [[scruter les alentours du village|rep1]]
+Je souhaiterais aller [[me balader  |rep2]]
+On m'a donné l'ordre de [[venir vous remplacer |rep3]]
+
+
+:: yes {"position":"400,1275","size":"100,100"}
+
+Vous récoltez quelques pièces au fond de cette fontaine. Les pièces brillent. Vous ne savez pas réellement combient cela vaut, mais vous pensez que ca pourra peut-être vous servir...
+
+En vous relevant, vous constatez que des villageois vous regardent d'un air choqué. Une es femmes du groupe se met même à pleurer. Peut-être qu'il nest pas trés sympathique de voler des offrandes! 
+return to the [[Fountain]]
+(set: $haveMoney to true)
+(set: $temp1 to true)
