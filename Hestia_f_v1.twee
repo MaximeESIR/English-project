@@ -85,6 +85,7 @@ You've been in there for a long time now. It would be more careful not to be cat
 
 :: Blood-Stained Altar {"position":"1725,150","size":"100,100"}
 {
+
 (if: $AltarDiscovered is not true)[
 <div class='passage'>
 <div class='header'>
@@ -1446,6 +1447,9 @@ return to the [[Fountain]]
 }
 
 
+:: StoryScript [script]
+var w = window.innerWidth;
+
 :: StoryStylesheet [stylesheet]
 .br{
 
@@ -1477,13 +1481,14 @@ body {
 .passage .header {
   width:800px;
   height:520px;
-  left : 55px;
+  left : calc((100% - 800px) / 2);
   border: #fff double 0.5em;
   border-radius: 0.3em;
   overflow: hidden;
   padding: 0;
   background-position: center;
   background-repeat: no-repeat;
+  
 }
 .passage .header div {
   border: #fff double 0.5em;
