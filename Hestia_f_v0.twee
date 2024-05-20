@@ -1,0 +1,1533 @@
+:: StoryTitle
+Hestia97
+
+
+:: StoryData
+{
+  "ifid": "1004610C-F4E6-4CD2-AF30-EFF736C8E8C3",
+  "format": "Harlowe",
+  "format-version": "3.3.8",
+  "start": "Blood-Stained Altar",
+  "zoom": 0.6
+}
+
+
+:: \ Fish accepted {"position":"1525,650","size":"100,100"}
+{
+(set: $Fish_accepted to true)
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/market2.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You take the fish and start to eat it.
+The seawoman's voice interrupts you thoughts:"Oh oh, it seems you like it. If you have money, come back to me ! i am going to the port, and i have a fantastic boat ! "
+After that, she starts walking away slowly.
+<br>
+<br>
+You remember you are in a market and start wandering between the aisles.
+<br>
+Far away, a foutain catches your eyes, and you set off in its direction.
+As you walk, the injustices of the village become evident. Some laugh while others struggle in poverty. Nevertheless, your focus remains on escaping this place  !
+<br>
+During your walk, you find a panel depicting a flower with the words "Little garden".
+<br>
+Do you prefer
+to go to [[the fountain |Fountain]]
+or to [[the little garden|Little garden]]
+</div>
+
+</div>
+}
+
+
+:: \ hero {"position":"3200,700","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/good_end.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You know you're not a like anybody else. As a Hero of the Nation your arrival itself is an honor for this guards and their duty is to obey your orders.
+You approach from the one with the biggest armor (probably their superior) and scream :
+<br>
+(color:purple)[You]: "HEY !! I AM A HERO OF THE NATION !!! I HAVE TO... Heurg!"
+<br>
+You stop speaking as you begin to feel an intense pain in your belly. As you fall you see a person dressed in rags fleeing with a knife in his hand. You heard the guards screaming. Not everybody like heros here! 
+<br>
+You're DEAD, killed by a random person.
+</div>
+
+</div>
+}
+
+
+:: \ no risque {"position":"3250,275","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/corridor_headq.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+At least your previous adventures learned you that you're never to careful. You continue on your way and find on your left locker which is still open. A guard uniform is in there, waiting for you to steal it.
+<br>
+You put it on. The metalic armor is shaped as if muscles were deforming it, which is a pretty successful illusion.
+<br>
+You've been in there for a long time now. It would be more careful not to be catched here.
+[[You decide to go out of this place quickly.|sortir]]
+[[You decide to try taking the schedule you saw before. |risque]]
+(set: $guard_outfit to true)
+</div>
+
+</div>
+}
+
+
+:: Blood-Stained Altar {"position":"1725,150","size":"100,100"}
+{
+(if: $AltarDiscovered is not true)[
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/dark_cellar.jpg?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+<h1>You awaken in a dirty cellar</h1>
+The air is heavy and disturbing. As your eyes adjust to the darkness, you realize you are lying on a cold stone altar, where you can see ominous bloodstains.
+You can hear a eerie silence, broken only by the sound of water drops falling from the ceilling.
+<br>
+A shiver runs through you while you try to make sens of what is happening.
+Your senses heightened in this unsettling moment, you have to find an exit, and quickly ! 
+
+<br>
+Facing a crucial decision, you can see 2 roads in the shadow. The first ascends. The second leads to a closed door. Maybe one of this path can take you out...
+<br>
+You choose: [[the first path|Gloomy alley]] or [[the second path|inside the Castle]]
+</div>
+</div>
+(set: $AltarDiscovered to true)
+
+]
+}
+
+
+:: Castle {"position":"1350,600","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/king_throne.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You arrive at the castle gate. Tha guards lead you in a gigantic hall and move aside to let you enter. Inside you have still many stairs to climb before you arrive at the king's throne. The king is here, alone. The throne his pretty huge which would probably be impressive if the king were huge too.
+<br>
+(color:red)[King]: "You finally came, monster."
+<br>
+(color:purple)[You]: "Hey, I'm not a monster?"
+<br>
+(color:red)[King]: "Yes you are. No one knows exactly how you could be begotten cursed creature. For several months now, you had been going through the streets of the city slaughtering passers-by before stealing their faces to take their place. Having captured you we tried to kill you by all means, but without success: no one but you can kill you! That’s why we had to use a hypnotist."
+<br>
+At this moment you feel a shiver: a dark thing lurking deep within you that is waiting for an opportunity to reappear.<br>
+He grabs a knife and hands it to you.
+<br>
+(color:red)[King]: "Now if you’ve really become another person sacrifice yourself before the monster that’s in you wakes up again !"
+<br>
+[[Kill him |king killed]]
+<br>
+ [[Kill yourself |You dead]]
+ </div>
+</div>
+ }
+
+
+:: Fountain {"position":"2475,775","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/fountain.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+(if:$Fountain_discovered is not true)[
+You arrive at the Fountain.
+Everything seems to be wonderful around you. The enchanting architecture dive you in a fantasist world.The symphony of flowing water, melodious bird songs, and the villagers speaking creates a vibrant atmosphere.
+<br>
+Feeling captivated by the scene, you contemplate your next action:
+<br>
+(if: $temp1 is not true)[[see myself in the water]]<br>
+
+ [[spy those villagers]]
+]
+
+
+(if: $resistant is true)[
+A few moments later, people dressed in dark clothing appear in the square. The atmosphere of this once charming place changes completely.
+<br>
+With a confident stride, one of the individuals decides to speak to you.
+"You are the one we have heard about, the one who understands the people."
+You nod, not quite understanding what is happening before you.
+"We are the resistance against this mad king. But you come from far away... you do not know our story!"<br>
+Resisters? They might be dangerous, you think to yourself.<br>
+The man before you then proposes that you join them for a very important meeting that will mark the beginning of a revolt. He gives you the address of the house.
+<br>
+Do you want to attend this meeting? Or, as a good citizen, do you decide to report these anti-royalists?
+<br>
+I should join them. This is an opportunity for me to escape.<br>
+[[to the meeting |Old warehouse ]]     
+<br>
+But I could also take advantage of this situation by reporting them to the guards!<br>
+[[report to the guards|Guards’ barracks]]
+
+
+]
+
+(if: $Hero is true)[
+Back near the fountain, you really wonder if this whole story isn't a nightmare. How are you going to escape this mysterious village?
+<br>
+However, you now seem to be in the good graces of the village guard. Maybe you can use them to help you escape. While you're imagining all sorts of scenarios, a man passing by drops a piece of paper on the ground. When you pick it up, you read these words that fill you with great fear:
+"Leave, or they will kill you."
+<br>
+Is this a message for you? Of course, you are now alone at the fountain.
+<br>
+What do you want to do in this situation?<br>
+[[Go see the guards |Guards’ barracks]]
+
+]
+</div>
+
+</div>
+}
+
+
+:: Furtif {"position":"3100,300","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/schedule_guard.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+While the guards aren't looking at you,  you run and jump trough the door. You realise then that there could be some guard inside (°_°). It doesn't appear to be the case. The inside is messy, it looks like the cleaning hasn't been done for a century !
+<br>
+Crossing the corridor you see on your right a room with a large piece of paper on a wall. It seems to be a schedule. This could bring you some useful information but unfortunately a guard is sleeping (again!) at a desk.
+<br>
+Do you want to have a closer look at this?
+<br>
+[[Yes ! |risque]]
+<br>
+[[Nope ! | no risque]]
+</div>
+
+</div>
+}
+
+
+:: Gather information from the guards {"position":"2200,275","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/caught_guard.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You approach the guards and begin to speak:
+"Hello, I would like to know where I..."<br>
+Hardly have they seen you when they run towards you, pin you to the ground, and declare: "You have no business here."<br>
+<br>
+They lock you in the castle's prison, where you will be executed.
+<br>
+[[end |bad end1]]
+</div>
+
+</div>
+}
+
+
+:: Gloomy alley {"position":"1700,300","size":"100,100"}
+{
+(if:$Gloomy_alley_Discovered is not true)[
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/guard_dog.jpg?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+At the bottom of the path, you discover a long, dimly lit alley that appears to lead to what seems to be a major street.
+<br>
+About ten meters away, you can see a dog, next to which there is a man, asleep in his chair. This man is dressed in a way that reminds you of the attire worn by guards in old movies..
+<br>
+What do you want to do ? 
+<br>
+[[i'm going to kick the guard !]]
+<br>
+[[i'm going to detach the dog !]]
+<br>
+[[i'm just going to go through  ! |Market]]
+<br>
+[[Oh i have chocolate on me ! I'm going to give it to this little dog ! ]]
+</div>
+</div>
+
+(set: $Gloomy_alley_Discovered to true)
+
+]
+}
+
+
+:: Guards’ barracks {"position":"3050,575","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/headquarter_guard.spng.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+(set: $Guard_barrack_discovered to true)
+(if:$Hero is true)[
+You arrive in a place where many guards are present : it seems to be their headquarter.
+<br>
+There are numerous but you notice a door which is apparently not under surveillance.
+Maybe you could
+<br>
+[[Try to enter discreetly |Furtif]]
+<br>
+[[Enter while screaming "I AM A HERO OF THE NATION !!!" | hero]]
+
+]
+
+(if: $resistant is true)[
+(if: $steal is not true)[
+You arrive in a place where many guards are present : it seems to be their headquarter.
+After your meeting with the resistance movement, you have decided to denunce them.
+Was it the right thing to do? maybe not...
+<br>
+You are move up to the door, open it, and then wait to talk with a the guard  at the counter. An old man is talking with the one here, It's very long, so you decide to push him. You start talking with him,
+(color:purple)[you:] "The resistance is acting against the king, they"
+<br>
+A gunshot rang out. The old man was not only an old Man. The guard arrest him, while he is crying to you that you are a traitor
+You are dead
+<br>
+[[end |dead]]
+]
+(if: $steal is  true)[
+You arrive in a place where many guards are present : it seems to be their headquarter.
+<br>
+There are numerous but you notice a door which is apparently not under surveillance.
+Maybe you could
+<br>
+[[Try to enter discreetly |Furtif]]
+
+]
+]
+</div>
+
+</div>
+}
+
+
+:: Little garden {"position":"1575,1125","size":"100,100"}
+{
+(set: $Little_garden_discovered to true)
+
+(if:$analyse is true)[
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/king_tomb.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You're now in the little garden.<br>
+Nothing like the tight atmosphere of the resistance. <br>
+A tiny house draw your attention. Next to it a high hedge contaning a hole with a sign marked "OPEN". You go through it and find a man with a crown praying facing a tomb. Could it be a king ?<br>
+Has he begins to cry you wonder if he could answer some of your questions.<br>
+Do you really care about his pray ?
+<br>
+[[say "hello man!"|rencontre roi]]<br>
+[[don't say anything|laisser prier]]
+</div>
+</div>
+]
+
+(if:$abandon is true)[
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/king_tomb.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You have abandoned the idea of escaping through the main gate. You arrive at Little Garden. A small cottage catches your eye with its charm. Next to it, a hedge prevents you from seeing what is happening in that corner.
+<br>
+So, you head towards a hole in the hedge, indicated by a sign that says OPEN. As you pass through the hedge, you feel the gentleness of nature. The scents fill your nose while the wind caresses your skin. But you regain your composure.
+<br>
+Walking through the garden paths, you notice a sort of grave with a statue of a man wearing a crown beside it: a former king? At the foot of the grave, a small man seems to be sobbing and praying.
+<br>
+Do you want to disturb him in his prayer?<br>
+[[say "hello man!" |rencontre roi]]<br>
+[[don't say anything|laisser prier]]
+</div>
+
+</div>
+]
+(else:)[
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/old_gardener.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+(if: $Fish_accepted is true)[That fish wasn't very fresh finally...]
+(else:)[I have finally left this crazy lady behind...] 
+Hum... Am I lost ?"
+ <br>
+ How could you escape ?
+ How can you escape? At this thought, you get angry and give a big kick to a flower pot. Damn...
+An old woman, wearing a hat with a sunflower on it, arrives shouting:
+<br>
+ (color:green)[old woman]: "What have you done? My flower, my poor flower. MONSTER! You have killed my flower. Flowers are alive, they breathe, they deserve to be cherished, to be loved."
+<br>
+You really don't know where to put yourself! Ouch... very embarrassed, you decide to retrace your steps. The only solution, the [[Fountain]]
+
+ </div>
+</div>
+]
+}
+
+
+:: Market {"position":"1725,775","size":"100,100"}
+{
+(if:$Market_discovered is not true)[
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/marketplace.jpg?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+While walking in the alley, the cacophony of voices grows louder.
+The light is getting brighter. You see shadows moving.
+Emerging from the alley's depths, you find  yourself in a immense noisy place with a lot of people. 
+There are some market stall; and savory aromas stir your hunger..
+<br>
+A figure approoaches from behind. It's a woman dressed in the attire of a fisherman.
+She walks wobbly, maybe because she likes alcohol.
+She holds out a breaded fish towards you with a jovial smile: "Ohoh little boy, you seems hungry ! take one of my delicious fish ! "
+<br>
+You are skeptic. Why would a stranger extand suck generosity? 
+You pause, weighing your options. You sense sincerity. What do you want to do?
+
+
+<br>
+[[I may accept it... | Fish accepted]]
+<br>
+[[Sorry, I don't want your fish.]]
+<br>
+</div>
+
+</div>
+
+(set: $Market_discovered to true)
+]
+}
+
+
+
+:: Oh i have chocolate on me ! I'm going to give it to this little dog !\  {"position":"1825,550","size":"100,100"}
+
+
+
+:: Oh i have chocolate on me ! i'm going to give it to this little dog !\  {"position":"1625,500","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/dog_chocolate.jpg?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You get out of your pocket a bar of chocolate.
+<br>
+You feel happy giving it to the dog.
+<br>
+But...you remember that dogs do not like chocolate.
+<br>
+The dog begins to drool bubbles. A few minutes after, he is dead. 
+<br>
+Oh...[[i'm just going to go through  ! |Market]]
+</div>
+
+</div>
+}
+
+
+:: Old warehouse\  {"position":"3150,1425","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/alley_warehouse.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You arrived at the neighborhood where the resistance was established. 
+The street is quite dark, unlike most of the places you have been able to visit until today.
+<br>
+At the corner of the street you find the warehouse indicated by the resistant. You hesitate to go in as you don't really know what could happen inside. But your quest for freedom reminds you that this may be your only chance to get out. 
+<br>
+[[enter |entrer]]
+[[analyse the street|analyse]]
+</div>
+
+</div>
+}
+
+
+:: Run towards the passage on the right {"position":"2350,225","size":"100,100"}
+{
+(if:$Gloomy_alley_Discovered is not true)[
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/castle.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+As soon as the guards see you, they try to catch you, but you manage to escape. You find yourself outside what looked like a castle. Moving discreetly, you reach the heart of the village. In the distance, you see what appears to be a fountain.
+<br>
+Head towards the [[Fountain]].
+
+</div>
+</div>
+
+]
+}
+
+
+:: Sorry, I don't want your fish. {"position":"1875,775","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/market2.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You remember you are in a market and start wandering between the aisles.
+<br>
+Far away, a foutain catches your eyes, and you set off in its direction.
+As you walk, the injustices of the village become evident. Some laugh while others struggle in poverty. Nevertheless, your focus remains on escaping this place  !
+<br>
+During your walk, you find a panel depicting a flower with the words "Little garden".
+<br>
+Do you prefer
+to go to [[the fountain |Fountain]]
+or to [[the little garden|Little garden]]
+</div>
+
+</div>
+}
+
+
+:: Village door {"position":"2000,1475","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/village_door.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+(if: $Village_door_discovered is not true)[
+You arrive in a boulevard that leads to a huge metal door. The village is surrounded by old ramparts that make you understand that the means to escape are limited.
+<br>
+]
+
+
+(if: $guard_outfit is true)[
+	(if:$schedule is true)[
+    	with your guard gear and their schedules, you wait for the opportune moment to pass through this gate which constitutes the last rampart facing your freedom.
+        (if: $know_truth is not true)[
+        	You don’t really know why you got stuck or who you really are. But you are certain that running away is the best thing to do. You begin to approach the gate when no guard is there, and you move away from the village   ]
+            [[end]]
+       
+
+    ]
+
+    (if:$schedule is not true)[
+    Equipped with your guard gear, you don’t really know when you might try to flee or if it’s even possible. However, as a guard, shouldn’t you be able to get out whenever you want?     <br>
+    [[Try to get out |tentative_sortie ]]<br>
+    (if:$abandon is not true)[
+    [[Give the idea of getting out |abandon]]]
+    
+    ]
+]
+
+(if: $guard_outfit is not true)[
+(if: $schedule is true)[
+You only have a schedule with you to try to escape. Is it really wise to go out the front door? [[Try to get out|tentative sortie2]]<br>
+(if:$abandon is not true)[
+[[Don't try|abandon]]]
+
+]
+]
+ </div>
+</div>
+(set:$Village_door_discovered to true)
+}
+
+
+:: You dead {"position":"1250,475","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/bad_end_screen.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You feel a dark entity rising deep inside yourself. You let it grow and as it grows you begin to feel eupohoric.
+<br><br>
+But suddenly it starts to scare you. You think once again about all the people you've encountered during your escape. Do they deserve to spend the rest of they live in fear of a monster?
+<br>
+(color:red)[King]: "Do it now !"
+<br>
+You take the knife and stick it in your chest. Times get slower. Your vision blurs and you feel as if your body started to burn.
+<br>
+You died.
+<br>
+END
+</div>
+</div>
+}
+
+
+:: abandon {"position":"2450,1700","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/dark_alley.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+(if: $Little_garden_discovered is not true)[
+You decide to abandon the idea of leaving through the main gate. A wise decision, as you feel it could have ended badly. You remember having seen a sign indicating "Little garden". Do you want to [[head towards Little Garden? |Little garden]] 
+]
+
+(if: $Little_garden_discovered is true)[
+You decide to abandon the idea of leaving through the main gate. A wise decision, as you feel it could have ended badly.
+	(if:$Fish_accepted is true)[
+    	But wait... you remember a woman invited you to board her boat. You had forgotten about it until now because you didn't think it would work. But it's your last option
+        <br>
+[[go to the port|port]]]
+  (if:$Fish_accepted is false)[But... What are you going to do? No options are available to you... you will have to return to the  [[Village door|Village door]]]
+]
+</div>
+
+</div>
+(set:$abandon to true)
+
+}
+
+
+:: accepted {"position":"3275,1075","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/ship_port.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You come onboard and start the ride.<br>
+About ten people are onboard with you including the captain. The latter doesn't seem really happy to receive you.<br>
+What if this man became a problem?
+<br>
+Maybe you whould try to [[kill him|kill the captain]]
+<br>
+or maybe [[not |dont kill]]
+</div>
+
+</div>
+}
+
+
+:: adouble {"position":"3500,625","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/talking_guard_cell.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+(color:purple)[You]: 'Guards , I am an Hero of the Nation. What are you doing???"
+<br>
+You heard footsteps coming, then the guard you knocked out you appears.
+<br>
+(color:red)[Guard]:"Why did you act like a thief if you're a Hero of the Nation, hu?"
+<br>
+You decide to use your speaker skills to convince this guard.
+<br>
+(color:purple)[You]:"I didn't want to wake you up! See, I know how hard the work of a guard is. You're constantly under pressure, most of people don't like you and you're not even paid enough for..."
+<br>
+(color:red)[Guard]:"Enought! Don't try to fool me!"
+<br>
+What could you reply?
+[[I wanted to offer a cake to a guard who saved my life, so I needed to know when his shift ends.|apprendre emplois ]]
+<br>
+[[I would like to enroll in the army and protect hour beautiful country so I need to know the schedule as every guard.|apprendre emplois ]]
+</div>
+
+</div>
+}
+
+
+:: analyse {"position":"2250,1375","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/marketplace.jpg?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You analyze the street. In some places you can see homeless people which reminds you the sinister atmosphere in a part of the market.    <br>
+    (if:$Little_garden_discovered is not true)[
+    You also remember the little garden you didn’t go to. Maybe you’d like to go for a walk? After all, we never told you to come right away, who could blame you? [[Little garden]]
+    (set: $analyse to true)
+    ]
+    
+     (if:$Little_garden_discovered is true)[
+     But nothing else interesting.  You then decide to [[enter the warehouse|entrer]]
+     ]
+</div>
+</div>
+    }
+
+
+:: apprendre emplois\  {"position":"3650,625","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/out_of_cell.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+(color:red)[Guard]:" You'd better say it earlier camarade."
+<br>
+Th guard free you and lead you to his office. He shows you the schedule. That was finally pretty easy.
+<br>
+(color:purple)[You]: "Thank you so much my lord. Now I can accomplish my mission."
+<br>
+You know now when end the differents guard shift of the castle and the village's gate.
+You can finally [[leave this place.|sortir]]
+
+(set: $schedule to true)
+</div>
+
+</div>
+}
+
+
+:: bad end1 {"position":"1925,2050","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/bad_end_screen.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+Congratulations, you have finished the game.
+<br>
+However, not the best way, because it seems that you will spend the rest of your life underground for attempted escape.
+Nothing can save you now.
+<br>
+(if: $know_truth  is not true)[
+You couldn’t make the whole game! Who are you? Why are you here? so many questions you could have answered if you had made the right decisions.
+]
+</div>
+
+</div>
+}
+
+
+:: cry\  {"position":"3525,775","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/crying_cell.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You begin to scream and cry.
+Unfortunately acting like a five years old child doesn't seem to be the best way to draw the guards' attention. Maybe you should review your strategy.
+[[snif snof |prison]]
+(set: $cry to true)
+</div>
+
+</div>
+}
+
+
+:: dead {"position":"2850,300","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/bad_end_screen.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You are dead
+</div>
+
+</div>
+}
+
+
+:: dont kill {"position":"3425,1200","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/fail_escape_boat.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You refuse to kill the captain.
+<br>
+Thin a big wave comes, and you are carried away: dead
+</div>
+
+</div>
+}
+
+
+:: end {"position":"2575,1950","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/escape_end.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+Congrats you finally did it ! <br>
+You're now out of this insane village !<br>
+(if: $Hero is true)[ You've eaven become the hero of this nation (don't try to figure out what nation).]
+(if: $resistant is true)[ You've eaven become a resistant and risked your life for all this unknowns.]
+(if: $guard_outfit is true)[ You got a new outfit for your personnal armor collection. The helmet would make a very uncommon bowl, don't you think ? ]
+(if: $know_truth  is not true)[
+You have a feeling of uncompleted yet. Who are you ? How did you get in such a place ? So many questions which will remain unanswered. Maybe you could try other paths and try to discover the truth. ]
+</div>
+</div>
+}
+
+
+:: entrer {"position":"3100,1575","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/villager_door.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+Hesitantly, you enter this place without knowing what to expect.
+<br>
+As soon as you enter, a man blocks you. "Password?"<br>
+You do not know what to answer. No password has been sent to you! 
+<br>
+Suddenly, a second man whom you seem to recognize shouts, "It’s okay, let him go. He’s new. remember, the password is "TAMBEG" (set: mdp known)"
+<br>
+You mentally repeat this password in your head to make sure you can remember it.
+<br>
+ Then you [[walk into the warehouse |move forward]],
+(set: $old_warehouse_discovered to true)
+</div>
+
+</div>
+}
+
+
+:: i'm going to detach the dog ! {"position":"1550,375","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/dog_attacking.jpg?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You detach the dog and feel happy doing the right thing.
+He starts growling: " GRRR waf waf"
+Because of that, you start to be anxious.
+<br>
+The dog attacks you, not letting you any chance to survive.
+
+<br>
+<h1>DEAD</h1>
+<br>
+You returns to the [[Blood-Stained Altar]]
+</div>
+
+</div>
+}
+
+
+:: i'm going to kick the guard ! {"position":"1875,350","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/guard_attacking.jpg?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You start giving kicks to the guard.
+<br>
+Unfortunately, he is well trained ! He wakes up, and starts crying "stupid monster !" while kicking you.
+<br>
+You have any chance against this man.
+<br>
+
+<h1>DEAD</h1>
+<br>
+You returns to the [[Blood-Stained Altar]]
+
+</div>
+
+</div>
+}
+
+
+:: inside the Castle {"position":"2225,100","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/hall.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+One enters a vast hall dominated by a throne situated at the back, with guards lined up on either side. However, the throne is empty – where could the king have gone? To the right of the throne, a passage seems to lead to the exit. Nevertheless, it would be wise to gather information from the guards before exploring further.
+<br>
+What to do?
+<br>
+[[Gather information from the guards]]
+<br>
+[[Run towards the passage on the right]]
+
+</div>
+</div>
+
+}
+
+
+:: join them {"position":"2850,1125","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/strange_villagers.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You apologise  for spying on them.
+<br>
+(color:red)[Bignose]: "Why were you in this bush ? "
+You do not know what to reply. As you hesitate, another villager starts talking.
+<br>
+(color:blue)[Oneharm]  "What do you think about the king ?"
+<br>
+[[The king can not be a bad person. What are you accusing him of?|reply 1]]
+<br>
+[[All kings are the same. they are not nice persons. But what is the problem ? |reply 2]]
+</div>
+
+</div>
+}
+
+
+:: kill the captain {"position":"3425,1075","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/escape_ship.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You enter the cabin when a huge wave suddenly submerges the boat: the whole crew is washed away! Just you and the captain left. You attack him with the only thing at your disposal: your hands.<br>
+As the seconds pass, the captain’s breath slows down: you won.
+<br>
+You then change course, letting the village far behind you. well done!<br>
+END
+</div>
+
+</div>
+}
+
+
+:: king killed {"position":"1425,475","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/end_screen.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You feel a dark entity rising deep inside yourself. You let it grow and as it grows you begin to feel eupohoric.
+<br>
+(color:red)[King]: "Do it now !"
+<br>
+(color:purple)[You]: "No."
+<br>
+The king tries to give you the knife to kil you. You don't let him any chance to do so. You grab him and begin to strangle him. He begins to struggle and tries to call for help but no sound comes from his mouth. While his breath disappears a smile grows on your face then you begin to laugth with joy.
+<br>
+A new king is born today.
+<br>
+END
+</div>
+
+</div>
+}
+
+
+:: laisser prier {"position":"1550,1300","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/old_sunflower.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You leave the little man praying. After all, it's not very polite to interrupt someone crying  at a grave!
+<br>
+Alright, you have waited long enough, and the sun is starting to set. Just as you are about to leave, you meet an old woman with a small hat adorned with a sunflower. She is probably working alone in this garden.
+<br>
+Arrived closed to her, the woman thanks you for not interrupting the king while he was prying.
+What, the king? you turn around, but there is no one there anymore. You missed the chance to confront him about what he did to you: maybe he knows what is happening here: it is the king no?
+<br>
+ <br>
+ (if:$abandon is true)[Unfortunatly, you missed the chance to speak to the king... and all chances to learn more about what is happening here. You may have missed the opportunity to escape... ad only one door remains open to you: the main gate [[porte princpale|Village door]]]
+ (else:)[(if:$analyse is true)[Later,  you find yourself back in the resistance quarter
+ [[entrer|entrer]]]]
+ </div>
+
+</div>
+ }
+
+
+:: move forward {"position":"3100,1700","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/old_warehouse_in.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+The athmosphere is tense. People whisper, or examine plans. You are lost, not knowing what to do. But you want to run away from this village meaning you must succeed in integrating.<br>
+You are looking for someone who will guide you, or at least give you an idea of what to do next. Finally, you meet the gaze of a person sitting at a table, focused on his task.<br>
+[[present yourself |part2]]
+</div>
+
+</div>
+}
+
+
+:: no {"position":"2325,1225","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/fountain.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+"I'm not a thief". I seems this coins are a kind of offer for a holy entity made by people in need. You feel sad about this people and decide to move away from the fountain. 
+return to the [[Fountain]]
+(set: $temp1 to true)
+</div>
+
+</div>
+}
+
+
+:: part2 {"position":"3100,1850","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/old_warehouse_in.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You arrive in front of a woman who is studying a plan. <br>
+(color:green)[Woman]:" So, are you here to help us?"<br>
+(color:purple)[You]:"Yes I am. If it is possible, I would like to help you about the problem of the guards. I think it should be nice to know where they are and when. It should help everyone to act"<br>
+(color:green)[Woman]:" That is a nice idea man. I Was preparing something, come, i'm going to explain it to you"
+<br>
+The woman begins to present you a detailed plan to steal the guard's schedules. She informs to you about an opportunity during the day when an entry of the guards' barracks isn't protected. You will have to strike at this moment.
+<br>
+She point out the location of the building where the office containing the documents is and provides you with information about the guards' patrols during the night too in order to help you. You are advised on the best streets to take in order to avoid the night and day patrol. She encourages you to remain discreet. Once you have all the necessary information, you mentally prepare for what is about to happen. Determined to succeed in order to finally this village and find the freedom you seek.
+<br>
+(set: $steal to true)
+[[steal the schedule |Guards’ barracks]]
+
+
+
+</div>
+
+</div>
+}
+
+
+:: port {"position":"3075,1075","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/port.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You arrive at the port, which happens to be an almost deserted place.
+<br>
+In one of the docks, you quickly recognize the person who offered you a fish, and how could you miss them!
+<br>
+The docks are swept by the wind and big clouds pile up on the horizon.
+On a dock, you quickly recognize the person who offered you a fish and walk towards her.
+(color:blue)[seawoman]: "Oh oh, here you are. Would you like to take a ride on my beautiful boat? the sea is rough, but that’s what makes the experience so exciting ahah! "
+<br>
+As you don't really know what to do you [[accept|accepted]]
+</div>
+
+</div>
+}
+
+
+:: prison {"position":"3375,650","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/cell.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You awake painfully. Your head hurts as you try to figure were you are.
+Bars! You're in prison now!
+<br>
+How could you get out of here?
+<br>
+[["HEY !! I AM A HERO OF THE NATION !!!" |adouble]]
+<br>
+(if: $cry is not true)[["LET ME GO PWEASE T-T" |cry ]]
+</div>
+
+</div>
+}
+
+
+:: rencontre roi {"position":"1350,1450","size":"100,100"}
+{
+(set:$king_discovered to true)
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/king_tomb2.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You go to the little man and give a tap on the shoulder.<br>
+He turns around surprised and begins to speak :<br>
+(color:red)[little_boy]:"How dare you touch me while I try to contact my predecessor??"
+<br>
+Is there a way this tiny man could be the king ? Or is he just insane ?
+<br>
+(color:red)[King]:"But you... I know who you are ! How did you escape from there ? "
+<br>
+(color:purple)[You]: "Well the guard was sleeping... Wait you know what I am doing here !?"
+<br>
+You grab the king's collar and lift him.
+<br>
+(color:red)[King]:"This city will be your tomb, you demon ! My people will stop living in fear as god will give us the power to kill you !"
+<br>
+It makes no sense but you feel deep inside you that something is wrong. You don't remind anything. Why didn't he kill you when you were jailed ?
+Has he continue speaking a picture comes into your mind. You can see in front of you a man similar to you, olding a pendulum which moves from right to left.
+<br>
+(color:red)[King]:"GUARDS !!"
+<br>
+You give the king way. It seems it is time to disappear.
+<br>
+(color:red)[King]:"If you did change come to the castle and I will tell you the truth"
+<br>
+(if:$analyse is true)[
+You begin to run away.<br>
+Back to the resistance quarter you try to forget this story.<br>
+[[enter |entrer]]<br>
+]
+
+
+(if:$abandon is true)[
+You don't undestand anything but you begin to run away. As you stop to breath you realise the best way to know the truth is to [[go to the castle|Castle]].
+]
+</div>
+</div>
+}
+
+
+:: rep1 {"position":"1925,1850","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/caught_guard.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+(color:red)[Guard]:"There is nothing to see! You should know that no one is allowed to leave the walls. Let's catch him."
+<br>
+Panicked, you start running. But you’re not a great athlete, and the guards quickly take you down. Unfortunately for you, you will never see daylight again as the guards decided to lock you in the bowels of the castle, 10 steps underground.
+<br>
+<br>
+[[end |bad end1]]
+</div>
+
+</div>
+}
+
+
+:: rep2 {"position":"2100,1875","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/caught_guard.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+(color:red)[Guard]:" Stroll? You should know that no one is allowed to leave the walls. Let's catch him!"
+<br>
+Panicked, you start running. But you’re not a great athlete, and the guards quickly take you down. Unfortunately for you, you will never see daylight again as the guards decided to lock you in the bowels of the castle, 10 steps underground.
+<br>
+On the other hand what an idea to ask to go for a walk when you know all the problems that haunt this village?
+<br>
+[[end |bad end1]]
+</div>
+
+</div>
+}
+
+
+:: rep3 {"position":"2275,1875","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/guard_door.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+(color:red)[Guard]:"Replace Us ?! But our shift ends only in 8 minutes !"<br>
+(color:purple)[You]:"Yes, you're must now go back back to tge QG. The big boss has a important mission for you."<br>
+(color:red)[Guard]:"Alright. But be careful, this week many people tried to escape by the great gate, and the prison is full. Poor guy... Well, orders are orders. Good luck."<br>
+<br>
+
+        (if: $know_truth is not true)[
+        	You don't really know  
+You don’t really know why you got stuck or who you really are. But for sure running away is the best thing to do. As the guards disappear on the horizon, joy rises in you. You push the door, and go.
+[[end]]
+        ]
+        </div>
+
+</div>
+}
+
+
+:: reply 1 {"position":"2700,1200","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/strange_villagers.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+(set: $Fountain_discovered to true)
+(set: $Hero to true)
+
+(color:green)[Oneear]:"  this king  is completly crazy. After several murders, he instaured a curfew, saying there was a monster in the village. But i am sure it is false. It is his fault"
+<br>
+You don't really understand what drives this villager to think that. Indeed, why would the king necessarily be at fault? On the contrary, the king seems to want to protect his subjects, which seems very noble to you.
+<br>
+You move away from the villager. 
+In your back, a man with his golden armor arrive, riding his horse. 
+<br>
+the knight says: " Brave guy, you seems to be the purest heart i have ever seen in  this village!. From now, i declaring you a hero of the nation! you have	 my benediction. 
+<br>
+you do not understand what is happening, but you agree.
+<br>
+After that, the knight leaves you, and the villagers, disgusted by you, leave the place.
+<br>
+[[Fountain]]
+(set: $Fountain_discovered to true)
+(set: $Hero to true)
+</div>
+
+</div>
+}
+
+
+:: reply 2 {"position":"2650,1050","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/strange_villagers.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+(color:green)[Oneear]:" It's true, they are all the same. However, this king  is completly crazy. After several murders, he instaured a curfew, saying there was a monster in the village. But i am sure it is false. It is his fault"
+<br>
+What do you want to reply ? 
+[[Yes, you are completly in the truth|reply 3]]
+[[oh well... are you sure of this?  |reply 4]]
+</div>
+
+</div>
+}
+
+
+:: reply 3 {"position":"2450,1100","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/strange_villagers.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+The villagers nod in agreement. They are determinated, and it's clear your words have resonated with them. They are happy to find solidarity in someone new. 
+As they scatter, i can see the hope in their eyes, the hope to defeat the oppressive regime that plagued their lives. 
+Encouraged by what they say, you want to do somethign for them. If it can help you to leave this village.
+<br>
+[[Fountain]]
+(set: $Fountain_discovered to true)
+(set: $resistant to true)
+</div>
+
+</div>
+}
+
+
+:: reply 4 {"position":"2575,1225","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/strange_villagers.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+(color:red)[Bignose] "You won't trust me ? hm ? i know everything, he tried to summon a demon, to become immortal"
+<br>
+You move away from the villager. 
+In your back, a man with his golden armor arrive, riding his horse. 
+<br>
+the knight says: " Brave guy, you seems to be the purest heart i have ever seen in  this village!. From now, i declaring you a hero of the nation! you have	 my benediction. 
+<br>
+you do not understand what is happening, but you agree.
+<br>
+After that, the knight leaves you, and the villagers, disgusted by you, leave the place.
+<br>
+[[Fountain]]
+(set: $Fountain_discovered to true)
+(set: $Hero to true)
+</div>
+
+</div>
+}
+
+
+:: risque {"position":"3350,400","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/guard_asleep.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You open the door completely (doing muuuuch more noise than aspected T_T).
+<br>
+The guard awakes. He seems surprised to see you... 
+(if: $guard_outfit is not true)[
+It doesn't appends every day that people try to enter discretly in his office. 
+Time freezes for a few seconds.
+The guard jump from his chair. You try to find an justification but before you can stammer anything he takes it his hand (yes he takes his chair) and throw it on your head. Your vision begin to be blurred then you collapse.
+<br>
+[[Wake up!!|prison]]
+]
+(if: $guard_outfit is true)[
+(color:red)[Guard]:"What are you doing !! You could barely make more noise if you wanted to !! Hum... do you want something?"
+<br>
+You try a bluff worthy of the greatest poker players.
+
+(color:purple)[You]:"Hu sorry... I didn't want to wake you up. But I'm a newbie I don't remember the schedule, I just wanted to check when my shift begins."
+<br>
+(color:red)[Guard]:"A newbie hum? Right you can watch but don't forget it from now. You know everybody is worked up. The king is furious since the creature has escaped."
+<br>
+You definitively don't know anything about what he told but you keep this though for you.
+<br>
+(color:red)[Guard]:"Go out now!"
+<br>
+You know now when the differents guard shift end at the castle and the village's gate.
+<br>
+(set: $schedule to true)
+[[obey |sortir]]
+]
+</div>
+
+</div>
+}
+
+
+:: see myself in the water {"position":"2100,950","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/fountain.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+As you peer into the water, your reflection gazes back at you.
+But you feel nauseous without knowing why you feel that, leaving you unsettled.
+<br>
+Despite the discomfort, your eyes are drawn at the botoom of the fountain, where coins catch your attention.
+Do you want to take them ?<br>
+[[yes]]<br>
+[[no]]
+</div>
+</div>
+}
+
+
+:: sortir {"position":"3500,400","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/headquarter_guard.spng.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You leave by the principal door, happy of all the things you found in there.
+(if:$guard_outfit is true)[(isn't this armor too big for you?)]
+(if: $schedule is true)[The information you got on the schedule could be really useful later.]
+(if: $resistant is true)[And you are a resistant, its not nothing.]
+<br>
+you can now [[go to the principal gate |Village door]] in order to escape.
+</div>
+
+</div>
+}
+
+
+:: spy those villagers {"position":"2775,925","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/strange_villagers.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You start spying those strange villagers.  After a few minuts, you understand their names
+<br>
+(color:red)[Bignose] "The king is not a nice guy, he established a curfew"
+<br>
+(color:blue)[Oneharm]  " I don't believe night monsters are real. I think the king is crazy"
+<br>
+(color:green)[Oneear] : "HEY YOU!  in the bush"
+<br>
+*He is looking at you*
+<br>
+villagers: "Yes you ! Come here !! what do you think about it ????"
+<br>
+[[join them]]
+</div>
+
+</div>
+}
+
+
+:: temp {"position":"1750,1875","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/caught_guard.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+The next patrol arrives. When the guards leave, you run towards the door. But... the door is heavy! By the time you open it, you see two guards running behind you. You manage to open the door, but hardly you cross this last that the guards put you on the ground.
+<br>
+One minute was too short.
+<br>
+[[end |bad end1]]
+</div>
+
+</div>
+}
+
+
+:: tentative sortie2 {"position":"1750,1675","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/marketplace.jpg?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+Armed with your schedule, you notice that between each round of the guards, a 1 minute interval allows you to escape.
+<br>
+Do you want to [[give up |abandon]]<br>
+[[continue|temp]]
+</div>
+</div>
+}
+
+
+:: tentative_sortie\  {"position":"1975,1700","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/guard_door.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You are approaching the huge metal door.<br>
+A guard stands on each side of the door.<br>
+(color:red)[Guard]:" STOP. What are you doing here?"
+<br>
+I've been ordered to [[survey the surrounding of the city|rep1]]<br><br>
+I would like to [[stroll  |rep2]]<br>
+I've been ordered to [[replace you |rep3]]
+</div>
+</div>
+}
+
+
+:: yes {"position":"2125,1175","size":"100,100"}
+{
+<div class='passage'>
+<div class='header'>
+<img src="https://github.com/Ethanesir/Image/blob/main/fountain.png?raw=true" style="width: 750px; height: 480px;">
+</div>
+<div class='content'>
+You strech your arm and collect some coins. You have no idea of how much it represent but it could be useful for later.
+<br>
+You stand up and note several shocked expressions on peoples faces. Maybe you should make yourself discret for a while. (-_-)
+<br>
+return to the [[Fountain]]
+(set: $haveMoney to true)
+(set: $temp1 to true)
+</div>
+
+</div>
+}
+
+
+:: StoryStylesheet [stylesheet]
+.br{
+
+}
+#sidebar {
+  display:none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height:100%;
+}
+#passages {
+  margin:0;
+  padding: 0;
+  height:100%;
+}
+#passages * {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.passage {
+  left:20px
+  height:1600px;
+  position:relative;
+  font-size:2em;
+  font-family: "Lucida Sans Typewriter", Consolas, Monaco, monospace;
+}
+.passage .header {
+  width:800px;
+  height:520px;
+  left : 55px;
+  border: #fff double 0.5em;
+  border-radius: 0.3em;
+  overflow: hidden;
+  padding: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.passage .header div {
+  border: #fff double 0.5em;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+.passage .content {
+ 
+  top: 50px;
+  width:600;
+  border: #fff double 0.7em;
+  border-radius: 1em;
+  padding: 40px;
+  font-size:16px;
+}
+a.internalLink, a.externalLink {
+  border-bottom: solid #fff 1px;
+  color:#eee;
+  font-weight:normal;
+}
+a.internalLink:hover, a.externalLink:hover {
+  text-decoration:none;
+  border-bottom: none;
+  color:#000;
+  background-color:#fff;
+  font-weight:normal;
+  padding-left: 0;
+}
+a.internalLink:active, a.externalLink:active {
+  border-bottom: 0;
+}
+/*
+@media screen and (max-width: 960px) {
+  .passage {
+    font-size: 1.5em;
+    width: 75%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .passage {
+    font-size: 1.25em;
+    width: 95%;
+  }
+}
